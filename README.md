@@ -42,8 +42,8 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <!--<li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#Data/Function-Flow">Data/Function Flow</a></li>
+    <!--<li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>-->
   </ol>
 </details>
@@ -72,7 +72,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To replicate this project, you simply have to download the Arduino file "sensors.io" and the Raspbian image for the Raspberry Pi "raspimg.iso". It is recommended you follow the wiring diagram before you start programming your boards. You will also need the Raspberry Pi imager, linked below. 
+To replicate this project, you simply have to download the Arduino file "sensors.io" and the Raspbian image for the Raspberry Pi "raspimg.iso". It is recommended you follow the wiring diagram before you start programming your boards. You will also need the Raspberry Pi imager, linked <a href="https://www.raspberrypi.com/software/">here</a>. 
 
 I have preconfigured the Raspberry Pi to have the following config parameters:
 * SSH enabled (Username "pi", password "pi")
@@ -117,7 +117,9 @@ Note:
 ### Installation
 
 1. Wire up the sensors as shown below
+
 ![Wiring Diagram](https://i.imgur.com/YZO90iD.png)
+
 Note: The Arduino is simply connected to the Rasp Pi using any USB port and the provided cable for the Arduino that is also used to program it
 
 2. Clone the repo using your terminal (CMD on Windows)
@@ -134,6 +136,7 @@ Note: The Arduino is simply connected to the Rasp Pi using any USB port and the 
 4. Open Arduino IDE and select "Open..." under "File" in the top left hand side of the toolbar. From here, open "sensors.ino"
 
 5. Select "Tools" from the toolbar, and ensure you have the right "Board" and "Port" option selected. Board should match your board, in my case "Arduino Uno". For port, it will say your board's name, in my case "COM3: Arduino"
+ 
 ![Arduino IDE](https://i.imgur.com/xIV3cLK.png)
 
 6. Select "Upload" shown here. You can open the Serial Monitor if you wish, using CTRL + SHIFT + M
@@ -142,7 +145,7 @@ Note: The Arduino is simply connected to the Rasp Pi using any USB port and the 
 ![Upload](https://i.imgur.com/mbj3Gve.png)
 
 
-7. Open Raspiberry Pi Imager on your pc. Click "CHOOSE OS" and then "CUSTOM", select the "raspimg.iso" file provided. 
+7. Open Raspberry Pi Imager on your pc. Click "CHOOSE OS" and then "CUSTOM", select the "raspimg.iso" file provided. 
 
 8. Select storage device (SD card from Pi) by clicking "CHOOSE STORAGE". Only your sd card should show up but be careful as it'll format all your card! 
 
@@ -164,13 +167,15 @@ Note: The Arduino is simply connected to the Rasp Pi using any USB port and the 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Simply plug the Raspberry Pi in to power and you are done! The launcher.sh script automagically runs the serial communication script betweent the Arduino and the Pi!
+Simply plug the Raspberry Pi in to power and you are done! The launcher.sh script automagically runs the serial communication script between the Arduino and the Pi!
 
 <a href="http://10.0.0.238/app.php">Visit your dashboard by clicking me!</a>
 
 Note: If the above link doesn't work, that simply means your Pi has a different IP address than the one configured above. Simply replace the IP address with your Pi's address to fix this
 
 _For more examples, please refer to the Apache2 [Documentation](https://httpd.apache.org/)_
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -216,12 +221,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT 
-## Contact
+<!-- CONTACT -->
+## Data/Function Flow
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+![Flow](https://i.imgur.com/JmXzT1o.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -239,20 +242,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 
 [PHP]: https://img.shields.io/badge/-PHP-blue?style=flat-square&logo=php
 [PHP-url]: https://php.net
