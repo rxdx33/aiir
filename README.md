@@ -90,10 +90,10 @@
 
 ### Built With
 
-* [![PHP][php.net]][PHP-url]
-* [![HMTL][html.com]][HTML-url]
-* [![Python3][Python3.com]][Python-url]
-* [![C][learn-c.org]][C-url]
+* [![PHP][www.php.net]][PHP-url]
+* [![HMTL][www.html.com]][HTML-url]
+* [![Python3][www.Python3.com]][Python-url]
+* [![C][www.learn-c.org]][C-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
