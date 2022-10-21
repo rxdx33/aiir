@@ -119,6 +119,7 @@ Note:
 1. Wire up the sensors as shown below
 ![Wiring Diagram](https://i.imgur.com/YZO90iD.png)
 Note: The Arduino is simply connected to the Rasp Pi using any USB port and the provided cable for the Arduino that is also used to program it
+
 2. Clone the repo using your terminal (CMD on Windows)
    ```sh
    git clone https://github.com/rxdx33/aiir.git
@@ -131,8 +132,24 @@ Note: The Arduino is simply connected to the Rasp Pi using any USB port and the 
    sudo apt install apache2
    ```
 4. Open Arduino IDE and select "Open..." under "File" in the top left hand side of the toolbar. From here, open "sensors.ino"
+
 5. Select "Tools" from the toolbar, and ensure you have the right "Board" and "Port" option selected. Board should match your board, in my case "Arduino Uno". For port, it will say your board's name, in my case "COM3: Arduino"
 ![Arduino IDE](https://i.imgur.com/xIV3cLK.png)
+
+6. Select "Upload" shown here. You can open the Serial Monitor if you wish, using CTRL + SHIFT + M
+![Upload](https://i.imgur.com/mbj3Gve.png)
+
+7. Open Raspiberry Pi Imager on your pc. Click "CHOOSE OS" and then "CUSTOM", select the "raspimg.iso" file provided. 
+
+8. Select storage device (SD card from Pi) by clicking "CHOOSE STORAGE". Only your sd card should show up but be careful as it'll format all your card! 
+
+9. Press "WRITE" and take a coffee break.
+1[Pi](https://i.imgur.com/l1dGPUW.png)
+
+10. Plug the Arduino cable into the Raspberry Pi (USB to Arduino cable) and insert power cable to the Pi.
+
+11. All done! Wasn't that seamless?
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
