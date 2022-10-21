@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">AIIR</h3>
+  <h1 align="center">AIIR</h1>
 
   <p align="center">
     Air Information Interface with Remote Access
@@ -137,14 +137,20 @@ Note: The Arduino is simply connected to the Rasp Pi using any USB port and the 
 ![Arduino IDE](https://i.imgur.com/xIV3cLK.png)
 
 6. Select "Upload" shown here. You can open the Serial Monitor if you wish, using CTRL + SHIFT + M
+
+
 ![Upload](https://i.imgur.com/mbj3Gve.png)
+
 
 7. Open Raspiberry Pi Imager on your pc. Click "CHOOSE OS" and then "CUSTOM", select the "raspimg.iso" file provided. 
 
 8. Select storage device (SD card from Pi) by clicking "CHOOSE STORAGE". Only your sd card should show up but be careful as it'll format all your card! 
 
 9. Press "WRITE" and take a coffee break.
-1[Pi](https://i.imgur.com/l1dGPUW.png)
+
+
+![Pi](https://i.imgur.com/l1dGPUW.png)
+
 
 10. Plug the Arduino cable into the Raspberry Pi (USB to Arduino cable) and insert power cable to the Pi.
 
