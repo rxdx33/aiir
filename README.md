@@ -42,9 +42,9 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <!--<li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>-->
   </ol>
 </details>
 
@@ -53,9 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-![My Remote Image](https://imgur.com/a/W9AM1jX)
+![Homepage](https://i.imgur.com/skn74Gg.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,32 +72,67 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To replicate this project, you simply have to download the Arduino file "sensors.io" and the Raspbian image for the Raspberry Pi "raspimg.iso". It is recommended you follow the wiring diagram before you start programming your boards. You will also need the Raspberry Pi imager, linked below. 
+
+I have preconfigured the Raspberry Pi to have the following config parameters:
+* SSH enabled (Username "pi", password "pi")
+* I2C and SPI enabled
+* Preconfigured IP address of 10.0.0.238 (Easily changed if you wish)
+* On reboot, launch the "launcher.sh" program, which pings the webserver to grab the sensor data from the Arduino
+* Apache2 will also autostart on reboot
+
+To build this project, I used:
+* Arduino Uno R3 (Any arduino will work fine. I recommend Leonardo or Micro, as they are the cheapest)
+* Raspberry Pi 3 Model B (Any pi will work fine. I recommend any the Pico W, as they are extremely cheap)
+* Generic breadboard
+* DHT22 sensor (from Core Electronics. DHT11 will also work fine)
+* SGP30 sensor (from Core Electronics. Any other sensor will need reprogramming)
+* Some jumper wire and a debug LED
+* Ender 3 V2 3D printer (Any printer will work fine)
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+They are automagically preinstalled! That is, only if you use the "raspimg.iso" file provided, which I highly recommend to prevent debugging theatrics. If you are using a clean Rasp Pi image, follow the steps below:
+
+* Update
   ```sh
-  npm install npm@latest -g
+  sudo apt-get update && sudo apt-get upgrade -y
+  sudo apt-get autoremove -y
   ```
+  
+* Python3
+  ```sh
+  sudo apt install python3
+  ```
+  
+* Apache2 (Comes with HTML/PHP/CSS support)
+  ```sh
+  sudo apt install apache2
+  ```
+  
+Note: 
+* The Arduino natively supports C so there is no need to update it or install it
+* You will need to download the latest Arduino IDE for your computer, found <a href="https://www.arduino.cc/en/software/">here</a>
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Wire up the sensors as shown below
+![Wiring Diagram](https://i.imgur.com/YZO90iD.png)
+Note: The Arduino is simply connected to the Rasp Pi using any USB port and the provided cable for the Arduino that is also used to program it
+2. Clone the repo using your terminal (CMD on Windows)
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/rxdx33/aiir.git
    ```
-3. Install NPM packages
+3. (ONLY If not using supplied Raspberry Pi iamge) Install prerequisites packages shown above
    ```sh
-   npm install
+   sudo apt-get update && sudo apt-get upgrade -y
+   sudo apt-get autoremove -y
+   sudo apt install python3
+   sudo apt install apache2
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+4. Open Arduino IDE and select "Open..." under "File" in the top left hand side of the toolbar. From here, open "sensors.ino"
+5. Select "Tools" from the toolbar, and ensure you have the right "Board" and "Port" option selected. Board should match your board, in my case "Arduino Uno". For port, it will say your board's name, in my case "COM3: Arduino"
+![Arduino IDE](https://i.imgur.com/xIV3cLK.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,9 +141,13 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Simply plug the Raspberry Pi in to power and you are done! The launcher.sh script automagically runs the serial communication script betweent the Arduino and the Pi!
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<a href="http://10.0.0.238/app.php">Visit your dashboard by clicking me!</a>
+
+Note: If the above link doesn't work, that simply means your Pi has a different IP address than the one configured above. Simply replace the IP address with your Pi's address to fix this
+
+_For more examples, please refer to the Apache2 [Documentation](https://httpd.apache.org/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,12 +156,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Implement graphs for nerds (see: developers)
+- [ ] Save logs using crontab to have a backlog of previous stats
+- [ ] Implement images for each variable, to be a more visually pleasing experience
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
