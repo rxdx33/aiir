@@ -90,6 +90,14 @@ To build this project, I used:
 * Some jumper wire and a debug LED
 * Ender 3 V2 3D printer (Any printer will work fine)
 
+Full program descriptions:
+* app.php - This is the main dashboard for the web server, access it on 10.0.0.238/app.php
+* appdemo.php - This is an experimental developer dashboard that has some manual override variables
+* launcher.sh - Bash/Shell script to autorun the serial communication script and the Apache2 web server 
+* raspimg.iso - Preconfigured Raspbian image
+* sensors.ino - Arduino file to interpret sensor data and perform calculations
+* webtest.py - Serial communication script that pulls sensor data from a text file "data.txt" that contains realtime sensor data
+
 ### Prerequisites
 
 They are automagically preinstalled! That is, only if you use the "raspimg.iso" file provided, which I highly recommend to prevent debugging theatrics. If you are using a clean Rasp Pi image, follow the steps below:
