@@ -15,7 +15,7 @@
   <h1 align="center">AIIR</h1>
 
   <p align="center">
-    Air Information Interface with Remote Access
+    Air Quality Information Interface with Remote Access
     <br />
     <br />
     <br />
