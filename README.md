@@ -217,6 +217,20 @@ File breakdown:
 
 <a href="https://www.youtube.com/shorts/J-t-nH1eaZA?feature=share">See it fully assembled here</a>
 
+## Price Breakdown
+
+Price breakdown, demonstrating the entire project is feasible for around $100, meeting the project goal.
+
+PRICE - ITEM - ALTERNATIVE
+$20 (Core Electronics) - Arduino Uno (already supplied) - Leonardo or Micro, whatever is cheapest
+$20 (Core Electronics) - Raspberry Pi 3 (already supplied) - Pico or Zero, whatever is cheapest
+$10 (Any electronics store) - Breadboard and jumper wire 
+$20 (Core Electronics) - DHT22 sensor - DHT11 is available but less supported and equal price
+$40 (Core Electronics) - SGP30 sensor - Other sensors are available but software support is unknown
+TOTAL = ~$110
+
+Note: Enclosure cost is ignored as this project can operate OK without an enclosure, otherwise it is estimated to be $5-10 extra to the total cost
+
 <!-- ROADMAP -->
 ## Roadmap
 
