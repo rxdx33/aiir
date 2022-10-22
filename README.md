@@ -203,10 +203,17 @@ The STL files attached are all require to enclose this project as intended howev
 File breakdown:
 - Box Lid = The lid for the box, made to fit snuggly so it cannot be knocked off.
 
+![Shelf](https://i.imgur.com/s6o0TQS.png)
+
 - Box Shelf = The mid shelf that the breadboard/sensors sit on top of, in the higher stage of the box. Has a large cutout for the sensor jumper wires to plug into the Arduino
+
+![Shelf](https://i.imgur.com/PZJ3o3t.png)
 
 - Box Shell = The base/shell of the enclosure, which houses the Pi and Arduino in their seperate compartments, while allowing access for cable management.
 
+![Shell](https://i.imgur.com/fXJT2SP.png)
+
+![Shell](https://i.imgur.com/WDGbo3N.png)
 
 <a href="https://www.youtube.com/shorts/J-t-nH1eaZA?feature=share">See it fully assembled here</a>
 
