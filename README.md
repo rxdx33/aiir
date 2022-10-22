@@ -195,10 +195,27 @@ _For more examples, please refer to the Apache2 [Documentation](https://httpd.ap
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 
+<!-- MODEL -->
+## Model
+
+The STL files attached are all require to enclose this project as intended however this project can function perfectly fine in open air and without an enclosure. For more accurate and long term usage, an enclosure with ample air circulation is highly recommended
+
+File breakdown:
+- Box Lid = The lid for the box, made to fit snuggly so it cannot be knocked off.
+
+- Box Shelf = The mid shelf that the breadboard/sensors sit on top of, in the higher stage of the box. Has a large cutout for the sensor jumper wires to plug into the Arduino
+
+- Box Shell = The base/shell of the enclosure, which houses the Pi and Arduino in their seperate compartments, while allowing access for cable management.
+
+
+<a href="https://www.youtube.com/shorts/J-t-nH1eaZA?feature=share">See it fully assembled here</a>
+
 <!-- ROADMAP -->
 ## Roadmap
 
 - [ ] Implement graphs for nerds (see: developers)
+- [ ] Implement public interface so that it is accessible outside home network
+- [ ] Develop a better "air index" as it can be misleading
 - [ ] Save logs using crontab to have a backlog of previous stats
 - [ ] Implement images for each variable, to be a more visually pleasing experience
 
